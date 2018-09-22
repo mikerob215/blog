@@ -1,12 +1,13 @@
 <mat-sidenav-container>
   <mat-sidenav
-    #sidenav
     mode="push"
+    (closedStart)="sideNavToggled()"
+    [opened]="sideNavIsOpen$ | async"
   >
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
-      <button mat-button (click)="sidenav.toggle()">
+      <button (click)="sideNavToggled()" mat-button>
         <mat-icon>menu</mat-icon> Menu
       </button>
       <span class="app-title">{{title}}</span>

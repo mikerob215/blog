@@ -1,19 +1,37 @@
-import {
-  Action,
-  ActionReducer,
-  ActionReducerMap,
-  createFeatureSelector,
-  createSelector,
-  MetaReducer
-} from '@ngrx/store';
+import {Action, ActionReducer, ActionReducerMap, MetaReducer} from '@ngrx/store';
 import {environment} from '../../environments/environment';
 
-export interface State {
 
+export enum SideNavActionTypes {
+  sideNavToggled = '[SideNav] sideNavOpened',
+}
+
+export class SideNavToggled implements Action {
+  readonly type = SideNavActionTypes.sideNavToggled;
+}
+
+export type SideNavActions = SideNavToggled;
+
+export interface SideNavState {
+  sideNavIsOpen: boolean;
+}
+
+export interface State {
+  sideNavState: SideNavState;
 }
 
 export const reducers: ActionReducerMap<State> = {
-  somethingReducer: (state, action) => state,
+  sideNavState: (state: SideNavState = {sideNavIsOpen: true}, action: SideNavActions) => {
+    switch (action.type) {
+      case SideNavActionTypes.sideNavToggled:
+        return {
+          ...state,
+          sideNavIsOpen: !state.sideNavIsOpen,
+        };
+      default:
+        return state;
+    }
+  },
 };
 
 
