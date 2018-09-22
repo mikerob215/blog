@@ -6,15 +6,24 @@ import {
   createSelector,
   MetaReducer
 } from '@ngrx/store';
-import { environment } from '../../environments/environment';
+import {environment} from '../../environments/environment';
 
 export interface State {
-  sideNavIsOpen: boolean;
+
 }
 
 export const reducers: ActionReducerMap<State> = {
-
+  somethingReducer: (state, action) => state,
 };
 
 
-export const metaReducers: MetaReducer<State>[] = !environment.production ? [] : [];
+const AppLogger = (reducer: ActionReducer<any>): ActionReducer<any> =>
+  (state: State, action: Action) => {
+    console.log('state', state);
+    console.log('action', action);
+    return reducer;
+  };
+
+export const metaReducers: MetaReducer<State>[] = !environment.production ? [] : [
+  AppLogger,
+];

@@ -6,6 +6,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatSidenavModule, MatToolbarModule} from '@angular/material';
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers';
+import {AppLayoutModule} from '../app-layout/app-layout.module';
 
 @NgModule({
   declarations: [
@@ -14,9 +15,8 @@ import { reducers, metaReducers } from './reducers';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatSidenavModule,
-    MatToolbarModule,
-    StoreModule.forRoot(reducers, { metaReducers })
+    StoreModule.forRoot(reducers, { metaReducers }),
+    AppLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

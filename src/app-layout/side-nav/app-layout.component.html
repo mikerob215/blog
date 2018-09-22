@@ -1,0 +1,15 @@
+<mat-sidenav-container>
+  <mat-sidenav
+    #sidenav
+    mode="push"
+  >
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button mat-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon> Menu
+      </button>
+      <span class="app-title">{{title}}</span>
+    </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>
