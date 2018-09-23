@@ -6,15 +6,8 @@ import { MatButtonModule, MatIconModule, MatListModule, MatSidenavModule, MatToo
  * Module containing all the parts of material used in application
  */
 @NgModule({
-  imports: [CommonModule],
-  exports: [
-    MatButtonModule,
-    MatIconModule,
-    MatListModule,
-    MatSidenavModule,
-    MatToolbarModule,
-  ],
-  declarations: [],
+    imports: [CommonModule],
+    exports: [MatButtonModule, MatIconModule, MatListModule, MatListModule, MatSidenavModule, MatToolbarModule],
+    declarations: [],
 })
-export class AppMaterialModule {
-}
+export class AppMaterialModule {}
