@@ -1,7 +1,6 @@
-<mat-sidenav-container>
+<mat-sidenav-container (backdropClick)="sideNavToggled()">
   <mat-sidenav
     mode="push"
-    (closedStart)="sideNavToggled()"
     [opened]="sideNavIsOpen$ | async"
   >
     <app-side-nav-content></app-side-nav-content>
@@ -13,6 +12,6 @@
       </button>
       <span class="app-title">{{title}}</span>
     </mat-toolbar>
-    theres gonna be content here
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

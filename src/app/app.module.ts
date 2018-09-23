@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { AppLayoutModule } from '../app-layout/app-layout.module';
+import { MainContentModule } from '../main-content/main-content.module';
 
 import { AppComponent } from './app.component';
 import { getInitialState, metaReducers, reducers } from './reducers';
@@ -18,6 +19,7 @@ import { getInitialState, metaReducers, reducers } from './reducers';
             initialState: getInitialState,
         }),
         AppLayoutModule,
+        MainContentModule,
         StoreDevtoolsModule.instrument(),
     ],
     providers: [],

@@ -1,10 +1,13 @@
 <mat-nav-list>
+  <a (click)="linkClicked()" mat-list-item routerLink="/">
+    Home
+  </a>
   <h3>Posts</h3>
-  <mat-list-item *ngFor="let post of posts$ | async">
+  <a (click)="linkClicked()" *ngFor="let post of posts$ | async" mat-list-item routerLink="/posts">
       {{post.title | titlecase}}
-  </mat-list-item>
+  </a>
   <h3>Projects</h3>
-  <mat-list-item *ngFor="let project of ['project name']">
+  <mat-list-item *ngFor="let project of ['project']">
     {{project | titlecase}}
   </mat-list-item>
 </mat-nav-list>
