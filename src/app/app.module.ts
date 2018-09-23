@@ -1,25 +1,27 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { AppLayoutModule } from '../app-layout/app-layout.module';
 
-import {AppComponent} from './app.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {StoreModule} from '@ngrx/store';
-import {getInitialState, metaReducers, reducers} from './reducers';
-import {AppLayoutModule} from '../app-layout/app-layout.module';
-import {StoreDevtoolsModule} from '@ngrx/store-devtools';
+import { AppComponent } from './app.component';
+import { getInitialState, metaReducers, reducers } from './reducers';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    StoreModule.forRoot(reducers, {metaReducers, initialState: getInitialState}),
+    StoreModule.forRoot(reducers, {
+      metaReducers,
+      initialState: getInitialState,
+    }),
     AppLayoutModule,
     StoreDevtoolsModule.instrument(),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {
+}

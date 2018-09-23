@@ -1,16 +1,13 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {AppLayoutComponent} from './side-nav/app-layout.component';
-import {AppMaterialModule} from '../app-material/app-material.module';
-import {AppSideNavContentModule} from '../app-side-nav-content/app-side-nav-content.module';
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { AppMaterialModule } from '../app-material/app-material.module';
+import { AppSideNavContentModule } from '../app-side-nav-content/app-side-nav-content.module';
+import { AppLayoutComponent } from './side-nav/app-layout.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    AppMaterialModule,
-    AppSideNavContentModule,
-  ],
+  imports: [CommonModule, AppMaterialModule, AppSideNavContentModule],
   declarations: [AppLayoutComponent],
-  exports: [AppLayoutComponent]
+  exports: [AppLayoutComponent],
 })
-export class AppLayoutModule { }
+export class AppLayoutModule {
+}

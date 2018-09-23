@@ -1,6 +1,6 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {AppSideNavContentComponent} from './app-side-nav-content.component';
+import { AppSideNavContentComponent } from './app-side-nav-content.component';
 
 describe('AppSideNavContentComponent', () => {
   let component: AppSideNavContentComponent;
@@ -8,9 +8,8 @@ describe('AppSideNavContentComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [AppSideNavContentComponent]
-    })
-      .compileComponents();
+      declarations: [AppSideNavContentComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

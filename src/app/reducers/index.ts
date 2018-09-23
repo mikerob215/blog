@@ -1,5 +1,5 @@
-import {Action, ActionReducer, ActionReducerMap, MetaReducer} from '@ngrx/store';
-import {environment} from '../../environments/environment';
+import { Action, ActionReducer, ActionReducerMap, MetaReducer } from '@ngrx/store';
+import { environment } from '../../environments/environment';
 
 export enum SideNavActionTypes {
   sideNavToggled = '[SideNav] sideNavOpened',
@@ -23,7 +23,7 @@ export function getInitialState(): State {
   return {
     sideNavState: {
       sideNavIsOpen: false,
-    }
+    },
   };
 }
 
@@ -43,7 +43,6 @@ export function sideNavState(state: SideNavState, action: SideNavActions) {
   }
 }
 
-
 export function AppLogger(reducer: ActionReducer<any>): ActionReducer<any> {
   return (state: State, action: Action) => {
     console.log('state', state);
@@ -52,4 +51,6 @@ export function AppLogger(reducer: ActionReducer<any>): ActionReducer<any> {
   };
 }
 
-export const metaReducers: MetaReducer<State>[] = !environment.production ? [AppLogger] : [];
+export const metaReducers: MetaReducer<State>[] = !environment.production
+  ? [AppLogger]
+  : [];
