@@ -5,9 +5,8 @@ import { AppSideNavContentModule } from '../app-side-nav-content/app-side-nav-co
 import { AppLayoutComponent } from './app-layout/app-layout.component';
 
 @NgModule({
-  imports: [CommonModule, AppMaterialModule, AppSideNavContentModule],
-  declarations: [AppLayoutComponent],
-  exports: [AppLayoutComponent],
+    imports: [CommonModule, AppMaterialModule, AppSideNavContentModule],
+    declarations: [AppLayoutComponent],
+    exports: [AppLayoutComponent],
 })
-export class AppLayoutModule {
-}
+export class AppLayoutModule {}

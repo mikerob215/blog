@@ -9,19 +9,18 @@ import { AppComponent } from './app.component';
 import { getInitialState, metaReducers, reducers } from './reducers';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    StoreModule.forRoot(reducers, {
-      metaReducers,
-      initialState: getInitialState,
-    }),
-    AppLayoutModule,
-    StoreDevtoolsModule.instrument(),
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
+    declarations: [AppComponent],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        StoreModule.forRoot(reducers, {
+            metaReducers,
+            initialState: getInitialState,
+        }),
+        AppLayoutModule,
+        StoreDevtoolsModule.instrument(),
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
 })
-export class AppModule {
-}
+export class AppModule {}
