@@ -1,3 +1,10 @@
-<p>
-  Side nav content will go here
-</p>
+<mat-nav-list>
+  <h3>Posts</h3>
+  <mat-list-item *ngFor="let post of posts$ | async">
+      {{post.title | titlecase}}
+  </mat-list-item>
+  <h3>Projects</h3>
+  <mat-list-item *ngFor="let project of ['project name']">
+    {{project | titlecase}}
+  </mat-list-item>
+</mat-nav-list>
