@@ -5,6 +5,7 @@ import { AppSideNavContentComponent } from './app-side-nav-content/app-side-nav-
 @NgModule({
   imports: [CommonModule],
   declarations: [AppSideNavContentComponent],
+  exports: [AppSideNavContentComponent],
 })
 export class AppSideNavContentModule {
 }

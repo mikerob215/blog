@@ -4,12 +4,12 @@
     (closedStart)="sideNavToggled()"
     [opened]="sideNavIsOpen$ | async"
   >
-
+    <app-side-nav-content></app-side-nav-content>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
       <button (click)="sideNavToggled()" mat-button>
-        <mat-icon>menu</mat-icon>
+        <mat-icon color="accent">menu</mat-icon>
       </button>
       <span class="app-title">{{title}}</span>
     </mat-toolbar>

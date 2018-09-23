@@ -18,7 +18,7 @@ export class AppLayoutComponent {
     );
   }
 
-  sideNavToggled() {
+  sideNavToggled(): void {
     this.store.dispatch(new SideNavToggled());
   }
 }
