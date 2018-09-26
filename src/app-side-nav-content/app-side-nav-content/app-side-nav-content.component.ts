@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { select, Store } from '@ngrx/store';
 import { SideNavToggled } from '../../app-layout/state/app-layout.actions';
@@ -9,6 +9,7 @@ import { selectAllPosts } from '../../posts/posts.reducer';
     selector: 'app-side-nav-content',
     templateUrl: './app-side-nav-content.component.html',
     styleUrls: ['./app-side-nav-content.component.css'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppSideNavContentComponent implements OnInit {
     public posts$;
@@ -18,11 +19,9 @@ export class AppSideNavContentComponent implements OnInit {
         this.posts$.subscribe(console.log);
     }
 
-    ngOnInit() {
-
-    }
+    ngOnInit() {}
 
     linkClicked() {
-      return this.store.dispatch(new SideNavToggled());
+        return this.store.dispatch(new SideNavToggled());
     }
 }
